@@ -1,4 +1,5 @@
 discord
+pathlib
 asyncio
 aiohttp
 requests
