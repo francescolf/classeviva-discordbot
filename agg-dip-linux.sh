@@ -1,2 +1,2 @@
 #!/bin/bash
-python3.5 -m pip install --upgrade -r requirements.txt
+sudo python3.5 -m pip install --upgrade -r requirements.txt
