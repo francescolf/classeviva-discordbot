@@ -448,6 +448,9 @@ def login():
 	global stid
 	stid = re.sub(r"\D", "", rlogin['ident'])
 	
-
-
-botcompiti.run(TokenDiscord)
+	
+try:
+	botcompiti.run(TokenDiscord)
+except discord.errors.LoginFailure as e:
+	print("\n\nERRORE: Token Discord non valido (" + str(e) + ")\n\n")
+	sys.exit()
