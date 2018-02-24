@@ -1,4 +1,3 @@
-
 print("Caricamento in corso...")
 import discord
 import os
@@ -26,12 +25,13 @@ if str(ver) != versione:
 	print("**ATTENZIONE** Perderai le impostazioni del bot!")
 	a = input("Aggiornare? [si/no]: ")
 	if a == "si":
+		os.system("git reset --hard")
 		os.system("git pull origin")
-		asyncio.sleep(5)
-		print("Riavviare il bot")
+		os.system("sudo chmod +x start-linux.sh")
+		print("\n\nRiavviare il bot\n\n")
 		sys.exit()
 	else:
-		print("Aggiornamento annullato\n")
+		print("\nAggiornamento annullato\n")
 
 
 client = discord.Client()
