@@ -41,8 +41,6 @@ async def on_ready():
 
 	url2 = "https://web.spaggiari.eu/rest/v1/students/" + stid + "/card"	
 
-	if MostraRichieste == "si":
-		print("GET " + url2)
 	headers = {"Content-Type": "application/json", "Z-Dev-ApiKey": "+zorro+", "User-Agent": "zorro/1.0", "Z-Auth-Token": sttk}
 	ri = requests.get(url2, headers=headers) 
 	infoscuola = ri.json()
@@ -71,8 +69,6 @@ async def oggi(ctx):
 
 	url2 = "https://web.spaggiari.eu/rest/v1/students/" + stid + "/lessons/today"
 
-	if MostraRichieste == "si":
-		print("GET " + url2)
 	headers = {"Content-Type": "application/json", "Z-Dev-ApiKey": "+zorro+", "User-Agent": "zorro/1.0", "Z-Auth-Token": sttk}
 	ri = requests.get(url2, headers=headers) 
 	lezoggi = ri.json()
@@ -300,8 +296,6 @@ async def compiti(ctx):
 
 	url2 = "https://web.spaggiari.eu/rest/v1/students/" + stid + "/agenda/all/" + datainizio + "/" + datafine
 
-	if MostraRichieste == "si":
-		print("GET " + url2)
 	headers = {"Content-Type": "application/json", "Z-Dev-ApiKey": "+zorro+", "User-Agent": "zorro/1.0", "Z-Auth-Token": sttk}
 	ri = requests.get(url2, headers=headers) 
 	compiti = ri.json()
@@ -369,8 +363,6 @@ async def verifiche(ctx):
 
 	url2 = "https://web.spaggiari.eu/rest/v1/students/" + stid + "/agenda/all/" + datainizio + "/" + datafine
 
-	if MostraRichieste == "si":
-		print("GET " + url2)
 	headers = {"Content-Type": "application/json", "Z-Dev-ApiKey": "+zorro+", "User-Agent": "zorro/1.0", "Z-Auth-Token": sttk}
 	ri = requests.get(url2, headers=headers) 
 	compiti = ri.json()
@@ -448,8 +440,6 @@ def login():
 	url = urlbase + "/auth/login/"
 	headers = {"User-Agent": "zorro/1.0", "Z-Dev-Apikey": "+zorro+", "Content-Type": "application/json"}
 	data = {"uid": username, "pass": password}
-	if MostraRichieste == "si":
-		print("POST " + url)
 	r = requests.post(url, data=json.dumps(data), headers=headers) 
 	rlogin = r.json()
 
