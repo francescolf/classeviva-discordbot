@@ -28,6 +28,7 @@ if str(ver) != versione:
 		os.system("git reset --hard")
 		os.system("git pull origin")
 		os.system("sudo chmod +x start-linux.sh")
+		os.system("sudo chmod +x agg-dip-linux.sh")
 		print("\n\nRiavviare il bot\n\n")
 		sys.exit()
 	else:
