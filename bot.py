@@ -26,7 +26,10 @@ if str(ver) != versione:
 	print("**ATTENZIONE** Perderai le impostazioni del bot!")
 	a = input("Aggiornare? [si/no]: ")
 	if a == "si":
-		os.system("pkill -f bot.py || git reset --hard || git pull origin")
+		os.system("git pull origin")
+		asyncio.sleep(5)
+		print("Riavviare il bot")
+		sys.exit()
 	else:
 		print("Aggiornamento annullato\n")
 
