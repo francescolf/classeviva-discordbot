@@ -21,7 +21,7 @@ ver = requests.get('http://francescolf.altervista.org/ver.json')
 ver = ver.json()
 ver = ver["versione"]
 
-if str(ver) == versione:
+if str(ver) != versione:
 	print("\nE' disponibile un aggiornamento! Desideri scaricarlo?")
 	print("**ATTENZIONE** Perderai le impostazioni del bot!")
 	a = input("Aggiornare? [si/no]: ")
