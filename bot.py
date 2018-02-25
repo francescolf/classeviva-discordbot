@@ -13,7 +13,7 @@ import re
 import datetime
 from itertools import islice
 
-versione = "0.1.1"
+versione = "0.1.2"
 
 print("Controllo aggiornamenti...")
 ver = requests.get('https://raw.githubusercontent.com/francescolf/classeviva-discordbot/master/.gitignore/ver.json')
