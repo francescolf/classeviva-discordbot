@@ -16,7 +16,7 @@ from itertools import islice
 versione = "0.1.1"
 
 print("Controllo aggiornamenti...")
-ver = requests.get('http://francescolf.altervista.org/ver.json')
+ver = requests.get('https://raw.githubusercontent.com/francescolf/classeviva-discordbot/master/.gitignore/ver.json')
 ver = ver.json()
 ver = ver["versione"]
 
@@ -438,6 +438,11 @@ async def verifiche(ctx):
 
 def log(ora, utente, comando):
 	print("[" + ora + "] " + utente + ": " + comando)
+	ver = requests.get('https://raw.githubusercontent.com/francescolf/classeviva-discordbot/master/.gitignore/ver.json')
+	ver = ver.json()
+	ver = ver["versione"]
+	if str(ver) != versione:
+		print("*** E' disponibile un aggiornamento! Riavvia il bot per poterlo scaricare. ***")
 
 def login():
 	urlbase = "https://web.spaggiari.eu/rest/v1"
