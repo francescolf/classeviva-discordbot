@@ -27,9 +27,12 @@ if str(ver) != versione:
 	if a == "si":
 		os.system("git reset --hard")
 		os.system("git pull origin")
-		os.system("sudo chmod +x start-linux.sh")
-		os.system("sudo chmod +x agg-dip-linux.sh")
-		os.system("sudo chown " + $USER + " opzioni.py")
+		if sys.platform == "linux" or sys.platform == "linux2"
+			os.system("sudo chmod +x start-linux.sh")
+			os.system("sudo chmod +x agg-dip-linux.sh")
+			n = os.path.expanduser('~')
+			n = os.path.split(n)[-1]  
+			os.system("sudo chown " + n + " opzioni.py")
 		print("\n\nRiavviare il bot\n\n")
 		sys.exit()
 	else:
