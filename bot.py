@@ -71,7 +71,7 @@ async def on_ready():
 
 
 @asyncio.coroutine
-@botcompiti.command(pass_context=True)
+@botcompiti.command(pass_context=True, aliases=['Oggi'])
 async def oggi(ctx):
 	login()
 
@@ -266,7 +266,7 @@ async def oggi(ctx):
 
 
 @asyncio.coroutine
-@botcompiti.command(pass_context=True)
+@botcompiti.command(pass_context=True, aliases=['Compiti'])
 async def compiti(ctx):
 	login()
 
@@ -352,7 +352,7 @@ async def compiti(ctx):
 
 
 @asyncio.coroutine
-@botcompiti.command(pass_context=True)
+@botcompiti.command(pass_context=True, aliases=['Verifiche'])
 async def verifiche(ctx):
 	login()
 
