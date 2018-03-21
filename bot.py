@@ -27,7 +27,7 @@ if str(ver) != versione:
 	if a == "si":
 		os.system("git reset --hard")
 		os.system("git pull origin")
-		if sys.platform == "linux" or sys.platform == "linux2"
+		if sys.platform == "linux" or sys.platform == "linux2":
 			os.system("sudo chmod +x start-linux.sh")
 			os.system("sudo chmod +x agg-dip-linux.sh")
 			n = os.path.expanduser('~')
